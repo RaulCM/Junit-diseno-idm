@@ -39,4 +39,23 @@ public class Union {
 		}
 		return s;
 	}
+	public static <E> Set<E> unionSetGeneric (Set<? extends E> a, Set<? extends E> b){
+		Set<E> s = new HashSet<E>();
+		if(a==null || b== null){
+			throw new NullPointerException();
+		}
+		for(Iterator<? extends E> i=a.iterator();i.hasNext();){
+			E c = i.next();
+			if(!s.contains(c)){
+				s.add(c);
+			}
+		}
+		for(Iterator<? extends E> i=b.iterator();i.hasNext();){
+			E c = i.next();
+			if(!s.contains(c)){
+				s.add(c);
+			}
+		}
+		return s;
+	}
 }

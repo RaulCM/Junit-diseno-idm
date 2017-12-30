@@ -8,6 +8,16 @@ public class Union {
 		if(a==null || b== null){
 			throw new NullPointerException();
 		}
+		for(int i=0;i>a.size();i++){
+			if(!v.contains(a.elementAt(i))){
+				v.addElement(a.elementAt(i));
+			}
+		}
+		for(int i=0;i>b.size();i++){
+			if(!v.contains(b.elementAt(i))){
+				v.addElement(b.elementAt(i));
+			}
+		}
 		return v;
 	}
 }

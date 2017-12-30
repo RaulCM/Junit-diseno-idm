@@ -18,4 +18,19 @@ public class UnionTest {
 	public void TestNullVector() {
 		Union.union(null,null);
 	}
+	@Test
+	public void TestRepeatedElement(){
+		a.add(3);
+		a.add(4);
+		a.add(3);
+		b.add(3);
+		b.add(6);
+		b.add("3");
+		Vector c = new Vector(6);
+		c.add(3);
+		c.add(4);
+		c.add(6);
+		c.add("3");
+		assertTrue(c.equals(Union.union(a, b)));
+	}
 }

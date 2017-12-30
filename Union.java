@@ -20,4 +20,23 @@ public class Union {
 		}
 		return v;
 	}
+	public static Set unionSet (Set a, Set b){
+		Set<Object> s = new HashSet<Object>();
+		if(a==null || b== null){
+			throw new NullPointerException();
+		}
+		for(Iterator i=a.iterator();i.hasNext();){
+			Object c = i.next();
+			if(!s.contains(c)){
+				s.add(c);
+			}
+		}
+		for(Iterator i=b.iterator();i.hasNext();){
+			Object c = i.next();
+			if(!s.contains(c)){
+				s.add(c);
+			}
+		}
+		return s;
+	}
 }

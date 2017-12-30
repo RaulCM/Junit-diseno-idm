@@ -33,4 +33,15 @@ public class UnionTest {
 		c.add("3");
 		assertTrue(c.equals(Union.union(a, b)));
 	}
+	@Test
+	public void TestNullElement(){
+		a.add(3);
+		a.add(null);
+		b.add(3);
+		b.add(null);
+		Vector c = new Vector(6);
+		c.add(null);
+		c.add("3");
+		assertTrue(c.equals(Union.union(a, b)));
+	}
 }
